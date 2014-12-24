@@ -1,8 +1,7 @@
 // Code borrowed from Mocha's spec reporter:
 // https://github.com/mochajs/mocha/blob/5cabbb9/lib/reporters/spec.js
 mochaReporters.spec = function(runner) {
-  var self = this
-    , stats = this.stats
+  var stats = this.stats
     , indents = 0
     , n = 0
     , cursor = mochaReporters.cursor
