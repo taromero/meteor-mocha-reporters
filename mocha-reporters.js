@@ -1,8 +1,9 @@
 MochaWeb.testOnly(function() {
+  var mochaReporter = process.env.MOCHA_REPORTER || Meteor.settings.mochaReporter || 'min';
   var reporter = function(runner) {
     MochaWeb.MeteorCollectionTestReporter(runner);
-    min(runner);
-    runner.on('end', epilogue);
+    mochaReporters[mochaReporter](runner);
+    runner.on('end', mochaReporters.epilogue);
   }
 
   global.mocha._reporter = reporter;
