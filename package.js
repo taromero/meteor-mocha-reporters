@@ -1,7 +1,7 @@
 Package.describe({
   name: 'canotto90:mocha-reporters',
   summary: 'Adaptations of mocha reporters for mike:mocha',
-  version: '0.1.0',
+  version: '0.1.0.1',
   git: 'https://github.com/taromero/meteor-mocha-reporters',
   debugOnly: true
 });
